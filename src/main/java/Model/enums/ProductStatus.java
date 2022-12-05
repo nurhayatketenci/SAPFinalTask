@@ -1,4 +1,4 @@
-package Model;
+package Model.enums;
 
 public enum ProductStatus {
     OUT_OF_STOCK,

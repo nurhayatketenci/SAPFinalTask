@@ -1,62 +1,44 @@
 package Model;
 
+import Model.enums.ProductStatus;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import java.io.Serializable;
 import java.util.Date;
+import java.util.UUID;
 
-public class Product {
-    private int id;
+@Entity
+@NoArgsConstructor
+public class Product implements Serializable {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Getter
+    private UUID id;
+
+    @Setter
+    @Getter
     private String name;
+
+    @Setter
+    @Getter
     private int price;
-    private String status;
+
+    @Setter
+    @Getter
     private int code;
-    public int getCode() {
-        return code;
-    }
 
-    public void setCode(int code) {
-        code = code;
-    }
+    @Setter
+    @Getter
+    private ProductStatus productStatus;
 
-    public String getStatus() {
-        return status;
-    }
-
-    public void setStatus(String status) {
-        this.status = status;
-    }
-
+    @Setter
+    @Getter
     private Date createdAt;
 
-
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public int getPrice() {
-        return price;
-    }
-
-    public void setPrice(int price) {
-        this.price = price;
-    }
-
-    public Date getCreatedAt() {
-        return createdAt;
-    }
-
-    public void setCreatedAt(Date createdAt) {
-        this.createdAt = createdAt;
-    }
 }
