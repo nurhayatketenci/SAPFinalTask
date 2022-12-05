@@ -16,8 +16,6 @@ public class Product {
         code = code;
     }
 
-
-
     public String getStatus() {
         return status;
     }

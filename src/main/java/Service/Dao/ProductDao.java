@@ -5,5 +5,6 @@ import Model.Product;
 import java.util.List;
 
 public interface ProductDao {
-    public List<Product> getProducts();
+    public List<Product> getAllProducts();
+    public List<Product> getProductCode();
 }
