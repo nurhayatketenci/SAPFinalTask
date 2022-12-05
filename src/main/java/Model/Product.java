@@ -7,13 +7,13 @@ public class Product {
     private String name;
     private int price;
     private String status;
-    private int Code;
+    private int code;
     public int getCode() {
-        return Code;
+        return code;
     }
 
     public void setCode(int code) {
-        Code = code;
+        code = code;
     }
 
 
